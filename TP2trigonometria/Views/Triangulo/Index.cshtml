@@ -1,0 +1,47 @@
+﻿@model TP2trigonometria.Models.Triangulo
+
+@{
+    ViewBag.Title = "Calculadora de Triángulos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ingrese los lados del triángulo</h2>
+
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+@using (Html.BeginForm("Index", "Triangulo", FormMethod.Post))
+{
+    <div class="mb-3">
+        @Html.LabelFor(m => m.a, htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.a, new { @class = "form-control" })
+ 
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.b, htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.b, new { @class = "form-control" })
+
+    </div>
+    <div class="mb-3">
+        @Html.LabelFor(m => m.c, htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.c, new { @class = "form-control" })
+     
+    </div>
+
+    <input type="submit" value="Calcular" class="btn btn-primary" />
+}
+
+@if (ViewBag.Tipo != null)
+{
+    <div class="mt-4 p-3 border rounded bg-light">
+        <h3>Resultados</h3>
+        <p><strong>Perímetro:</strong> @ViewBag.P</p>
+        <p><strong>Semiperímetro:</strong> @ViewBag.S</p>
+        <p><strong>Área:</strong> @ViewBag.A</p>
+        <p><strong>Tipo de triángulo:</strong> @ViewBag.Tipo</p>
+        <p><strong> α:</strong> @ViewBag.Alpha°</p>
+        <p><strong> β:</strong> @ViewBag.Beta°</p>
+        <p><strong> γ:</strong> @ViewBag.Gamma°</p>
+    </div>
+}
