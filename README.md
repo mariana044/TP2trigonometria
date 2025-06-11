@@ -4,6 +4,7 @@
 **Código:** SC-601  
 **Profesor:** Luis Andrés Rojas Matey  
 **Estudiante:** Mariana Hidalgo De La O
+
 **Carné:** FH23015127 
 
 
@@ -24,7 +25,6 @@ https://github.com/mariana044/TP2trigonometria.git
 
 ## Recursos consultados
 
-- [Stack Overflow](https://stackoverflow.com/)
 - [Microsoft Docs - Math.Acos](https://learn.microsoft.com/en-us/dotnet/api/system.math.acos)
 - [GeeksForGeeks - Tipos de triángulo](https://www.geeksforgeeks.org/types-of-triangle/)
 - [W3Schools C# Validation Attributes](https://www.w3schools.com/cs/cs_validation.aspx)
